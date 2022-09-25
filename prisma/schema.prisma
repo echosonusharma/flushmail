@@ -10,10 +10,6 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-model Example {
-    id String @id @default(cuid())
-}
-
 // Necessary for Next auth
 model Account {
     id                String  @id @default(cuid())
@@ -57,4 +53,12 @@ model VerificationToken {
     expires    DateTime
 
     @@unique([identifier, token])
+}
+
+//
+
+model Waitlist {
+    id        String    @id @default(cuid())
+    email     String?   @unique
+    createdAt DateTime  @default(now())
 }

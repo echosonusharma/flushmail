@@ -5,5 +5,16 @@
     "source.fixAll": true,
     "source.organizeImports": true
   },
-  "cSpell.words": ["commitlint", "nextauth", "prisma", "superjson", "trpc"]
+  "cSpell.words": [
+    "clsx",
+    "commitlint",
+    "dayjs",
+    "flushmail",
+    "headlessui",
+    "nextauth",
+    "prisma",
+    "superjson",
+    "tailwindcss",
+    "trpc"
+  ]
 }
