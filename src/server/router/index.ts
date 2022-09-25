@@ -1,13 +1,13 @@
 // src/server/router/index.ts
-import { createRouter } from './context';
 import superjson from 'superjson';
+import { createRouter } from './context';
 
-import { exampleRouter } from './example';
+import { waitlistRouter } from './models/waitlist';
 import { protectedExampleRouter } from './protected-example-router';
 
 export const appRouter = createRouter()
   .transformer(superjson)
-  .merge('example.', exampleRouter)
+  .merge('waitlist.', waitlistRouter)
   .merge('auth.', protectedExampleRouter);
 
 // export type definition of API
